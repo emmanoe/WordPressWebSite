@@ -1,0 +1,20 @@
+[Wed Dec 23 14:45:15.493853 2020] [ssl:warn] [pid 10487] AH01882: Init: this version of mod_ssl was compiled against a newer library (OpenSSL 1.1.1h  22 Sep 2020, version currently loaded is OpenSSL 1.1.1g  21 Apr 2020) - may result in undefined or erroneous behavior
+[Wed Dec 23 14:45:15.494501 2020] [ssl:warn] [pid 10487] AH01909: localhost:8443:0 server certificate does NOT include an ID which matches the server name
+[Wed Dec 23 14:45:15.516169 2020] [ssl:warn] [pid 10512] AH01882: Init: this version of mod_ssl was compiled against a newer library (OpenSSL 1.1.1h  22 Sep 2020, version currently loaded is OpenSSL 1.1.1g  21 Apr 2020) - may result in undefined or erroneous behavior
+[Wed Dec 23 14:45:15.516734 2020] [ssl:warn] [pid 10512] AH01909: localhost:8443:0 server certificate does NOT include an ID which matches the server name
+[Wed Dec 23 14:45:15.527963 2020] [mpm_prefork:notice] [pid 10512] AH00163: Apache/2.4.46 (Unix) OpenSSL/1.1.1g PHP/7.4.13 configured -- resuming normal operations
+[Wed Dec 23 14:45:15.527989 2020] [core:notice] [pid 10512] AH00094: Command line: '/home/emmanoe/App/wordpress-5.6-0/apache2/bin/httpd.bin -f /home/emmanoe/App/wordpress-5.6-0/apache2/conf/httpd.conf'
+[Wed Dec 23 14:45:23.989706 2020] [mpm_prefork:notice] [pid 10512] AH00169: caught SIGTERM, shutting down
+[Wed Dec 23 14:45:26.523637 2020] [ssl:warn] [pid 11064] AH01882: Init: this version of mod_ssl was compiled against a newer library (OpenSSL 1.1.1h  22 Sep 2020, version currently loaded is OpenSSL 1.1.1g  21 Apr 2020) - may result in undefined or erroneous behavior
+[Wed Dec 23 14:45:26.524248 2020] [ssl:warn] [pid 11064] AH01909: localhost:8443:0 server certificate does NOT include an ID which matches the server name
+[Wed Dec 23 14:45:26.545679 2020] [ssl:warn] [pid 11065] AH01882: Init: this version of mod_ssl was compiled against a newer library (OpenSSL 1.1.1h  22 Sep 2020, version currently loaded is OpenSSL 1.1.1g  21 Apr 2020) - may result in undefined or erroneous behavior
+[Wed Dec 23 14:45:26.546232 2020] [ssl:warn] [pid 11065] AH01909: localhost:8443:0 server certificate does NOT include an ID which matches the server name
+[Wed Dec 23 14:45:26.558306 2020] [mpm_prefork:notice] [pid 11065] AH00163: Apache/2.4.46 (Unix) OpenSSL/1.1.1g PHP/7.4.13 configured -- resuming normal operations
+[Wed Dec 23 14:45:26.558338 2020] [core:notice] [pid 11065] AH00094: Command line: '/home/emmanoe/App/wordpress-5.6-0/apache2/bin/httpd.bin -f /home/emmanoe/App/wordpress-5.6-0/apache2/conf/httpd.conf'
+[Wed Dec 23 14:46:02.709392 2020] [mpm_prefork:notice] [pid 11065] AH00169: caught SIGTERM, shutting down
+[Wed Dec 23 14:46:05.239594 2020] [ssl:warn] [pid 13096] AH01882: Init: this version of mod_ssl was compiled against a newer library (OpenSSL 1.1.1h  22 Sep 2020, version currently loaded is OpenSSL 1.1.1g  21 Apr 2020) - may result in undefined or erroneous behavior
+[Wed Dec 23 14:46:05.240259 2020] [ssl:warn] [pid 13096] AH01909: localhost:8443:0 server certificate does NOT include an ID which matches the server name
+[Wed Dec 23 14:46:05.268065 2020] [ssl:warn] [pid 13143] AH01882: Init: this version of mod_ssl was compiled against a newer library (OpenSSL 1.1.1h  22 Sep 2020, version currently loaded is OpenSSL 1.1.1g  21 Apr 2020) - may result in undefined or erroneous behavior
+[Wed Dec 23 14:46:05.268622 2020] [ssl:warn] [pid 13143] AH01909: localhost:8443:0 server certificate does NOT include an ID which matches the server name
+[Wed Dec 23 14:46:05.279817 2020] [mpm_prefork:notice] [pid 13143] AH00163: Apache/2.4.46 (Unix) OpenSSL/1.1.1g PHP/7.4.13 configured -- resuming normal operations
+[Wed Dec 23 14:46:05.279844 2020] [core:notice] [pid 13143] AH00094: Command line: '/home/emmanoe/App/wordpress-5.6-0/apache2/bin/httpd.bin -f /home/emmanoe/App/wordpress-5.6-0/apache2/conf/httpd.conf'

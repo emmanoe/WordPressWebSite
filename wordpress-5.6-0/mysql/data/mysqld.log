@@ -1,0 +1,9 @@
+2020-12-23T13:44:49.215234Z mysqld_safe Logging to '/home/emmanoe/App/wordpress-5.6-0/mysql/data/mysqld.log'.
+2020-12-23T13:44:49.255556Z mysqld_safe Starting mysqld.bin daemon with databases from /home/emmanoe/App/wordpress-5.6-0/mysql/data
+2020-12-23T13:44:49.523754Z 0 [System] [MY-010116] [Server] /home/emmanoe/App/wordpress-5.6-0/mysql/bin/mysqld.bin (mysqld 8.0.22) starting as process 9180
+2020-12-23T13:44:49.567207Z 1 [System] [MY-013576] [InnoDB] InnoDB initialization has started.
+2020-12-23T13:44:50.322000Z 1 [System] [MY-013577] [InnoDB] InnoDB initialization has ended.
+2020-12-23T13:44:50.517459Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Bind-address: '::' port: 33060, socket: /tmp/mysqlx.sock
+2020-12-23T13:44:50.940746Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2020-12-23T13:44:50.941247Z 0 [System] [MY-013602] [Server] Channel mysql_main configured to support TLS. Encrypted connections are now supported for this channel.
+2020-12-23T13:44:51.022049Z 0 [System] [MY-010931] [Server] /home/emmanoe/App/wordpress-5.6-0/mysql/bin/mysqld.bin: ready for connections. Version: '8.0.22'  socket: '/home/emmanoe/App/wordpress-5.6-0/mysql/tmp/mysql.sock'  port: 3306  MySQL Community Server - GPL.

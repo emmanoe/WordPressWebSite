@@ -1,0 +1,51 @@
+[
+  {
+    "Title":       "Remove the Bitnami Banner",
+    "Cli":         "sudo /home/emmanoe/App/wordpress-5.6-0/apps/wordpress/bnconfig --disable_banner 1",
+    "Description": "Removing the bitnami banner",
+    "Success":     "Success! The banner has been removed properly, if it is still there please go to https://community.bitnami.com",
+    "Fail":        "Something when wrong while removing the banner, Please run bnsupport and open a ticket at: https://community.bitnami.com"
+  },
+  {
+    "Title":       "Set up Let's Encrypt",
+    "Cli":         "/home/emmanoe/App/wordpress-5.6-0/bncert-tool",
+    "Description": "Press Enter to continue",
+    "External":    true
+  },
+  {
+    "Title":       "Manage the services",
+    "Description": "Start/Stop/Manage the services",
+    "SubOptions":  [{
+      "Title":       "Get status of the services",
+      "Description": "Checking service status",
+      "Cli":         "sudo /home/emmanoe/App/wordpress-5.6-0/ctlscript.sh status",
+      "Success":     "This is your status:",
+      "Fail":        "Something when wrong while getting the status of the services, Please run bnsupport and open a ticket at: https://community.bitnami.com",
+      "PrintOut":    true
+    },{
+      "Title":       "Start the services",
+      "Description": "Starting the Bitnami services",
+      "Cli":         "sudo /home/emmanoe/App/wordpress-5.6-0/ctlscript.sh start",
+      "Success":     "Information after starting the services:",
+      "Fail":        "Something when wrong while starting the services, Please run bnsupport and open a ticket at: https://community.bitnami.com",
+      "PrintOut":    true
+    },{
+      "Title":       "Stop the services",
+      "Description": "Stopping the Bitnami services",
+      "Cli":         "sudo /home/emmanoe/App/wordpress-5.6-0/ctlscript.sh stop",
+      "Success":     "Information after stopping the services:",
+      "Fail":        "Something when wrong while stopping the services, Please run bnsupport and open a ticket at: https://community.bitnami.com",
+      "PrintOut":    true
+    }]
+  },
+  {
+    "Title":       "Run the Bitnami Support tool (bnsupport)",
+    "Cli":         "sudo /home/emmanoe/App/wordpress-5.6-0/bnsupport-tool",
+    "Description": "Press Enter to continue",
+    "External":    true
+  },
+  {
+    "Title":       "Quit",
+    "Exit":    true
+  }
+]

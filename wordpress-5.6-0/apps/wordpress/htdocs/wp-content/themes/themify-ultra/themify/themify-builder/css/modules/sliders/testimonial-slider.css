@@ -1,0 +1,20 @@
+.module-testimonial-slider.image-bubble .carousel-wrap{
+    position:relative
+}
+.module-testimonial-slider.image-bubble .carousel-nav-wrap{
+    text-align:left;
+    box-sizing:border-box;
+    padding:5px 15px;
+    position:absolute;
+    bottom:50px;
+    z-index:3;
+    right:0
+}
+.module-testimonial-slider.image-bubble .swiper-wrapper{
+    padding-bottom:50px
+}
+/* vertical slider arrow */
+.module-testimonial-slider.themify_builder_slider_vertical .testimonial-content{
+    padding-left:7%;
+    padding-right:7%
+}

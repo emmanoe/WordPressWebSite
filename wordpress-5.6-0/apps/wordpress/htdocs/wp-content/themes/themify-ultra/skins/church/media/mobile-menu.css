@@ -1,0 +1,8 @@
+#main-nav li a:before,
+.mobile_menu_active.header-stripe #main-nav li a:before{
+	display:none
+}
+#headerwrap #main-nav a:hover,
+#headerwrap #main-nav ul a:hover{
+	color:#ffc55f
+}

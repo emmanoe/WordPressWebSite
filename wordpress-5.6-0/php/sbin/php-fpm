@@ -1,0 +1,5 @@
+#!/bin/sh
+
+. /home/emmanoe/App/wordpress-5.6-0/scripts/setenv.sh
+
+exec /home/emmanoe/App/wordpress-5.6-0/php/sbin/.php-fpm.bin -y /home/emmanoe/App/wordpress-5.6-0/php/etc/php-fpm.conf -p /home/emmanoe/App/wordpress-5.6-0/php/var/ -c /home/emmanoe/App/wordpress-5.6-0/php/etc/php.ini "$@"

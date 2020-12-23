@@ -1,0 +1,22 @@
+prefix=/bitnami/lamp74stack-linux-x64/output/varnish
+exec_prefix=${prefix}
+bindir=${exec_prefix}/bin
+sbindir=/bitnami/lamp74stack-linux-x64/output/varnish/bin
+libdir=${exec_prefix}/lib
+sysconfdir=${prefix}/etc
+pkgsysconfdir=${sysconfdir}/varnish
+includedir=${prefix}/include
+pkgincludedir=${includedir}/varnish
+datarootdir=${prefix}/share
+datadir=${datarootdir}
+pkgdatadir=${datadir}/varnish
+vcldir=${pkgdatadir}/vcl
+vmoddir=${libdir}/varnish/vmods
+vmodtool=${pkgdatadir}/vmodtool.py
+vsctool=${pkgdatadir}/vsctool.py
+
+Name: VarnishAPI
+Description: Varnish API
+Version: 6.0.7
+Cflags: -I${includedir}/varnish
+Libs: -L${libdir} -lvarnishapi

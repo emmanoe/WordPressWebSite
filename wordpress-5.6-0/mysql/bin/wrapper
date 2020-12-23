@@ -1,0 +1,12 @@
+#!/bin/sh
+LD_LIBRARY_PATH=/home/emmanoe/App/wordpress-5.6-0/mysql/lib:/home/emmanoe/App/wordpress-5.6-0/mysql/../common/lib${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}
+export LD_LIBRARY_PATH
+case "$@" in
+  *--no-defaults*)
+    exec $0.bin "$@"
+    ;;
+  *--defaults-extra-file*)
+    exec $0.bin "$@"
+    ;;
+esac
+exec $0.bin --defaults-file=/home/emmanoe/App/wordpress-5.6-0/mysql/my.cnf "$@"

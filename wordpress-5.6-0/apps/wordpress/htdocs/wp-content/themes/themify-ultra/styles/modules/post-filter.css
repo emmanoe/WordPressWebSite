@@ -1,0 +1,23 @@
+.post-filter{
+	margin-bottom:2em
+}
+.post-filter li{
+	display:inline-block;
+	margin:0
+}
+.post-filter li a{
+	text-decoration:none;
+	text-transform:uppercase;
+	position:relative;
+	font-weight:700;
+	letter-spacing:.04em;
+	font-size:.8em;
+	line-height:1.2;
+	padding:.3em 1em;
+	border-radius:30px;
+	display:inline-block
+}
+.post-filter li.active a{
+	background-color:#272727;
+	color:#fff
+}

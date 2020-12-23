@@ -1,0 +1,12 @@
+prefix=/home/emmanoe/App/wordpress-5.6-0/common
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+
+Name: libxslt
+Version: 1.1.33
+Description: XSLT library version 2.
+Requires: libxml-2.0
+Libs: -L${libdir} -lxslt -L/home/emmanoe/App/wordpress-5.6-0/common/lib -lxml2 -L/home/emmanoe/App/wordpress-5.6-0/common/lib -lz -liconv -lm -ldl -lm 
+Cflags: -I${includedir}

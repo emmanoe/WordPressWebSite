@@ -1,0 +1,5 @@
+#!/bin/sh
+
+. /home/emmanoe/App/wordpress-5.6-0/scripts/setenv.sh
+
+exec /home/emmanoe/App/wordpress-5.6-0/varnish/bin/.varnishlog.bin -n /home/emmanoe/App/wordpress-5.6-0/varnish/var/varnish "$@"

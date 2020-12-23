@@ -1,0 +1,83 @@
+.responsive-tab-style .tab-nav-current-active{
+    display:inline-block;
+    cursor:pointer
+}
+.module.module-tab.responsive-tab-style .tab-nav-current-active:before{
+    content:'\e68e';
+    font-family:themify;
+    font-size:15px;
+    margin-right:8px;
+    line-height:1.75em
+}
+.ui.module.panel.responsive-tab-style .tab-nav:before{ 
+    display:none; 
+}
+.module.module-tab.responsive-tab-style .tab-nav-current-active.clicked + ul{
+   opacity:1;
+   visibility:visible;
+   top:40px
+}
+.module.module-tab.responsive-tab-style .tab-nav{
+    position:absolute;
+    background-color:#fff;
+    margin:0;
+    padding:5px 0;
+    top:100%;
+    left:0;
+    visibility:hidden;
+    opacity:0;
+    transition:opacity .25s linear;
+    z-index:11;
+    list-style:none;
+    text-align:left;
+    border-radius:2px;
+    box-shadow:0 0 1px 0 rgba(0,0,0,.4), 0 3px 10px rgba(0, 0, 0, .2);
+    min-width:140px;
+    max-height:170px;
+    overflow-y:auto;
+    box-sizing:border-box
+}
+.module.module-tab.responsive-tab-style .tab-nav.center-align{
+    left:50%;
+    transform:translateX(-50%);
+    text-align:center
+}
+.module.module-tab.responsive-tab-style .tab-nav.right-align{
+    left:auto;
+    right:0;
+    text-align:right
+}
+.module.module-tab.responsive-tab-style .tab-nav li{
+    margin:0;
+    padding:0;
+    display:block;
+    border:none;
+    font-weight:normal;
+    color:inherit;
+    overflow:hidden
+}
+.module.module-tab.responsive-tab-style .tab-nav li a{
+    font-size:13px;
+    line-height:normal;
+    padding:4px 10px 4px 15px;
+    width:141px;
+    box-sizing:border-box;
+    transition:color .3s linear;
+    outline:none;
+    text-decoration:none;
+    border:none;
+    box-shadow:none;
+    display:block
+}
+.responsive-tab-style.module .tab-nav-current-active{
+    color:#333;
+    cursor:default
+}
+.responsive-tab-style.module.ui.glossy .tab-nav>li a:before{
+    background-image:none
+}
+.responsive-tab-style.module.ui.glossy .tab-nav>li a:before,
+.responsive-tab-style.module.ui.rounded .tab-nav li,
+.responsive-tab-style.module.ui.glossy .tab-nav>li:hover{
+    border-radius:0
+}

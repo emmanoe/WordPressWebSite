@@ -1,0 +1,11 @@
+.header-widget .widgettitle{
+	text-align:left
+}
+.header-widget .widgettitle:before{
+	margin-left:0
+}
+.header-top-widgets #main-nav >li > a:after{
+	transform-origin:left;
+	width:100%;
+	display:block
+}

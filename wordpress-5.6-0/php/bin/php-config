@@ -1,0 +1,98 @@
+#! /bin/sh
+
+SED="/bin/sed"
+prefix="/home/emmanoe/App/wordpress-5.6-0/php"
+datarootdir="/home/emmanoe/App/wordpress-5.6-0/php/php"
+exec_prefix="${prefix}"
+version="7.4.13"
+vernum="70413"
+include_dir="${prefix}/include/php"
+includes="-I$include_dir -I$include_dir/main -I$include_dir/TSRM -I$include_dir/Zend -I$include_dir/ext -I$include_dir/ext/date/lib"
+ldflags=" -L/home/emmanoe/App/wordpress-5.6-0/common/lib -L/bitnami/lamp74stack-linux-x64/output/sqlite/lib -L/bitnami/lamp74stack-linux-x64/src/imap-2007f/c-client"
+libs="-lcrypt  -lc-client  -ltidy -lresolv -lcrypt -lreadline -lncurses -lrt -lldap -llber -lstdc++ -lcrypt -liconv -lgmp -lbz2 -lrt -lm -ldl  -lxml2 -lssl -lcrypto -lsqlite3 -lz -lcurl -lxml2 -lssl -lcrypto -lz -lpng15 -ljpeg -lssl -lcrypto -licuio -licui18n -licuuc -licudata -lonig -lsqlite3 -lxml2 -lxml2 -lcrypt -lxml2 -lxml2 -lxml2 -lxml2 -lxslt -lxml2 -lz -liconv -lm -ldl -lm -lxml2 -lexslt -lxslt -lxml2 -lz -liconv -lm -ldl -lm -lxml2 -lzip -lz -lssl -lcrypto -lcrypt "
+extension_dir='/home/emmanoe/App/wordpress-5.6-0/php/lib/php/extensions'
+man_dir=`eval echo ${datarootdir}/man`
+program_prefix=""
+program_suffix=""
+exe_extension=""
+php_cli_binary=NONE
+php_cgi_binary=NONE
+configure_options=" '--prefix=/home/emmanoe/App/wordpress-5.6-0/php' '--enable-fpm' '--with-fpm-user=daemon' '--with-fpm-group=daemon' '--with-apxs2=/home/emmanoe/App/wordpress-5.6-0/apache2/bin/apxs' '--with-zlib-dir=/home/emmanoe/App/wordpress-5.6-0/common' '--enable-mbstring=all' '--enable-soap' '--enable-bcmath' '--enable-ftp' '--with-xmlrpc' '--enable-cgi' '--with-imap=/bitnami/lamp74stack-linux-x64/src/imap-2007f' '--with-imap-ssl=/home/emmanoe/App/wordpress-5.6-0/common' '--with-png-dir=/home/emmanoe/App/wordpress-5.6-0/common' '--with-gd' '--with-zlib' '--with-curl=/home/emmanoe/App/wordpress-5.6-0/common' '--with-jpeg-dir=/home/emmanoe/App/wordpress-5.6-0/common' '--enable-exif' '--with-openssl=/home/emmanoe/App/wordpress-5.6-0/common' '--enable-calendar' '--enable-ctype' '--enable-pcntl' '--enable-session' '--enable-zip' '--with-bz2=/home/emmanoe/App/wordpress-5.6-0/common' '--enable-sockets' '--with-mcrypt=/home/emmanoe/App/wordpress-5.6-0/common' '--with-icu-dir=/home/emmanoe/App/wordpress-5.6-0/common' '--with-tidy=/home/emmanoe/App/wordpress-5.6-0/common' '--with-mysqli=mysqlnd' '--with-pdo-mysql=mysqlnd' '--with-pdo_sqlite=/bitnami/lamp74stack-linux-x64/output/sqlite' '--with-sqlite3=/bitnami/lamp74stack-linux-x64/output/sqlite' '--with-iconv=/home/emmanoe/App/wordpress-5.6-0/common' '--with-libxml-dir=/home/emmanoe/App/wordpress-5.6-0/common' '--with-xsl=/home/emmanoe/App/wordpress-5.6-0/common' '--enable-mbstring' '--with-freetype-dir=/home/emmanoe/App/wordpress-5.6-0/common' '--with-gmp=/home/emmanoe/App/wordpress-5.6-0/common' '--with-gettext' '--enable-intl' '--with-readline=/home/emmanoe/App/wordpress-5.6-0/common' '--with-libzip=/home/emmanoe/App/wordpress-5.6-0/common' '--with-pear' '--enable-gd' '--with-jpeg' '--with-libwebp' '--with-zip' '--with-ldap=/home/emmanoe/App/wordpress-5.6-0/common' '--disable-huge-code-pages' 'PKG_CONFIG_PATH=/bitnami/lamp74stack-linux-x64/output/sqlite/lib/pkgconfig:/home/emmanoe/App/wordpress-5.6-0/common/lib/pkgconfig' 'JPEG_CFLAGS=-I/home/emmanoe/App/wordpress-5.6-0/common/include' 'JPEG_LIBS=-L/home/emmanoe/App/wordpress-5.6-0/common/lib -ljpeg'"
+php_sapis=" apache2handler cli fpm phpdbg cgi"
+ini_dir=""
+ini_path="/home/emmanoe/App/wordpress-5.6-0/php/lib"
+
+# Set php_cli_binary and php_cgi_binary if available
+for sapi in $php_sapis; do
+  case $sapi in
+  cli)
+    php_cli_binary="${exec_prefix}/bin/${program_prefix}php${program_suffix}${exe_extension}"
+    ;;
+  cgi)
+    php_cgi_binary="${exec_prefix}/bin/${program_prefix}php-cgi${program_suffix}${exe_extension}"
+    ;;
+  esac
+done
+
+# Determine which (if any) php binary is available
+if test "$php_cli_binary" != "NONE"; then
+  php_binary="$php_cli_binary"
+else
+  php_binary="$php_cgi_binary"
+fi
+
+# Remove quotes
+configure_options=`echo $configure_options | $SED -e "s#'##g"`
+
+case "$1" in
+--prefix)
+  echo $prefix;;
+--includes)
+  echo $includes;;
+--ldflags)
+  echo $ldflags;;
+--libs)
+  echo $libs;;
+--extension-dir)
+  echo $extension_dir;;
+--include-dir)
+  echo $include_dir;;
+--php-binary)
+  echo $php_binary;;
+--php-sapis)
+  echo $php_sapis;;
+--configure-options)
+  echo $configure_options;;
+--man-dir)
+  echo $man_dir;;
+--ini-path)
+  echo $ini_path;;
+--ini-dir)
+  echo $ini_dir;;
+--version)
+  echo $version;;
+--vernum)
+  echo $vernum;;
+*)
+  cat << EOF
+Usage: $0 [OPTION]
+Options:
+  --prefix            [$prefix]
+  --includes          [$includes]
+  --ldflags           [$ldflags]
+  --libs              [$libs]
+  --extension-dir     [$extension_dir]
+  --include-dir       [$include_dir]
+  --man-dir           [$man_dir]
+  --php-binary        [$php_binary]
+  --php-sapis         [$php_sapis]
+  --ini-path          [$ini_path]
+  --ini-dir           [$ini_dir]
+  --configure-options [$configure_options]
+  --version           [$version]
+  --vernum            [$vernum]
+EOF
+  exit 1;;
+esac
+
+exit 0

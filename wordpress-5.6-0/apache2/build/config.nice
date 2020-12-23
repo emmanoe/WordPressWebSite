@@ -1,0 +1,33 @@
+#! /bin/sh
+#
+# Created by configure
+
+CC="gcc"; export CC
+CFLAGS="-I/bitnami/lamp74stack-linux-x64/output/mysql/include -I/home/emmanoe/App/wordpress-5.6-0/common/include -fPIC -m64"; export CFLAGS
+CPPFLAGS="-I/home/emmanoe/App/wordpress-5.6-0/common/include"; export CPPFLAGS
+LDFLAGS="-L/home/emmanoe/App/wordpress-5.6-0/common/lib -liconv"; export LDFLAGS
+"./configure" \
+"--prefix=/home/emmanoe/App/wordpress-5.6-0/apache2" \
+"--enable-so" \
+"--enable-mods-shared=most" \
+"--disable-auth_dbm" \
+"--without-berkeley-db" \
+"--enable-deflate" \
+"--enable-ssl" \
+"--with-ssl=/home/emmanoe/App/wordpress-5.6-0/common" \
+"--enable-proxy" \
+"--enable-proxy-http" \
+"--enable-proxy-balancer" \
+"--enable-rewrite" \
+"--with-apr=/home/emmanoe/App/wordpress-5.6-0/common/bin/apr-1-config" \
+"--with-apu=/home/emmanoe/App/wordpress-5.6-0/common/bin/apr-1-config" \
+"--with-pcre=/home/emmanoe/App/wordpress-5.6-0/common/bin/pcre-config" \
+"--enable-mpms-shared=all" \
+"--with-nghttp2=/home/emmanoe/App/wordpress-5.6-0/common/lib" \
+"--with-mpm=prefork" \
+"--enable-brotli" \
+"CC=gcc" \
+"CFLAGS=-I/bitnami/lamp74stack-linux-x64/output/mysql/include -I/home/emmanoe/App/wordpress-5.6-0/common/include -fPIC -m64" \
+"LDFLAGS=-L/home/emmanoe/App/wordpress-5.6-0/common/lib -liconv" \
+"CPPFLAGS=-I/home/emmanoe/App/wordpress-5.6-0/common/include" \
+"$@"

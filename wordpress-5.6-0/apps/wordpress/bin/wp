@@ -1,0 +1,6 @@
+#!/bin/bash
+. /home/emmanoe/App/wordpress-5.6-0/scripts/setenv.sh
+export WP_CLI_CONFIG_PATH="/home/emmanoe/App/wordpress-5.6-0/apps/wordpress/bin/wp-cli.yml"
+export WP_CLI_PHP_USED="/home/emmanoe/App/wordpress-5.6-0/php/bin/php"
+
+exec "/home/emmanoe/App/wordpress-5.6-0/php/bin/php" "/home/emmanoe/App/wordpress-5.6-0/apps/wordpress/bin/wp-cli.phar" "$@"

@@ -1,0 +1,32 @@
+.module-fancy-heading a{
+    text-decoration:none;  
+    display:inline-block
+}
+.module-fancy-heading a:hover{
+    text-decoration:none
+}
+.module-fancy-heading .sub-head{
+    padding-top:.6em;
+    margin-top:.2em;
+    font-size:65%
+}
+.module .sub-head.tb_hide_divider:before{
+    display:none
+}
+.module-fancy-heading .sub-head:before{
+    content:"";
+    border-top: 1px solid;
+    width:2em;
+    display:block;
+    padding-top:.2em;
+}
+.module-fancy-heading .tf_textc .sub-head:before{
+    margin:auto
+}
+.module-fancy-heading .tf_textr .sub-head:before{
+    margin:0 0 0 auto
+}
+.inline-fancy-heading .fancy-heading .sub-head:after,
+.inline-fancy-heading .fancy-heading .sub-head:before{
+    display: none
+}

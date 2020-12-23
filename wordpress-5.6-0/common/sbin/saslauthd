@@ -1,0 +1,6 @@
+#!/bin/sh
+
+. /home/emmanoe/App/wordpress-5.6-0/scripts/setenv.sh
+SASL_PATH="/home/emmanoe/App/wordpress-5.6-0/common/lib/sasl2"
+                export SASL_PATH
+exec /home/emmanoe/App/wordpress-5.6-0/common/sbin/.saslauthd.bin -f "/home/emmanoe/App/wordpress-5.6-0/common/etc/sasldb2" "$@"

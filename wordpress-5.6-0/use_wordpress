@@ -1,0 +1,8 @@
+#!/bin/sh
+
+PATH="/home/emmanoe/App/wordpress-5.6-0/apps/wordpress/bin:/home/emmanoe/App/wordpress-5.6-0/varnish/bin:/home/emmanoe/App/wordpress-5.6-0/sqlite/bin:/home/emmanoe/App/wordpress-5.6-0/php/bin:/home/emmanoe/App/wordpress-5.6-0/mysql/bin:/home/emmanoe/App/wordpress-5.6-0/letsencrypt/:/home/emmanoe/App/wordpress-5.6-0/apache2/bin:/home/emmanoe/App/wordpress-5.6-0/common/bin:$PATH"
+BITNAMI_ROOT="/home/emmanoe/App/wordpress-5.6-0"
+export BITNAMI_ROOT
+
+
+exec /bin/zsh --no-globalrcs --no-rcs
